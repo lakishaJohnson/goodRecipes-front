@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Sidebar() {
@@ -22,12 +23,19 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <h2 style={{fontFamily: "Courgette", marginBottom: "40px"}}>Quick & Easy Recipes</h2>
+      <h2 style={{ fontFamily: "Courgette", marginBottom: "40px" }}>
+        Quick & Easy Recipes
+      </h2>
       <ul>
         {quickRecipes.map((recipe) => (
-          <li key={recipe.id} style={{marginBottom: "40px"}}>{recipe.dish}</li>
+          <li key={recipe.id} style={{ marginBottom: "40px" }}>
+            {recipe.dish}
+          </li>
         ))}
       </ul>
+      <Link to="/recipes" className="view-more">
+        View more recipes...
+      </Link>
     </div>
   );
 }
