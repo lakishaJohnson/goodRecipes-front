@@ -1,0 +1,38 @@
+body {
+  background-color: #d7eaef;
+  margin: 0;
+  padding: 0; 
+}
+
+.hero {
+  background-image: url("https://www.allrecipes.com/thmb/SoBuPU73KcbYHl3Kp3j8Xx4A3fc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8805-CrispyFriedChicken-mfs-3x2-072-d55b8406d4ae45709fcdeb58a04143c2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 60vh;
+  width: 80vw;
+}
+.home-container {
+  display: flex;
+  /* background-color: #d7eaef; */
+}
+
+.sidebar {
+  width: 390px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.centered-text {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: Courgette, cursive;
+}
+
+.view-more {
+  padding-left: 80%;
+}
