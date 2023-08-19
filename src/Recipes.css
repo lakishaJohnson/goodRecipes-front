@@ -1,0 +1,18 @@
+.recipe-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.recipe-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
