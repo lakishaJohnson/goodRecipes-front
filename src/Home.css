@@ -29,10 +29,10 @@ body {
   text-align: center;
   font-size: 50px;
   margin-top: 50px;
-  margin-left: 50px;
+  margin-left: 20px;
   font-family: Courgette, cursive;
 }
 
 .view-more {
-  padding-left: 80%;
+  padding-left: 40%;
 }
