@@ -15,7 +15,6 @@ body {
 }
 .home-container {
   display: flex;
-  /* background-color: #d7eaef; */
 }
 
 .sidebar {
@@ -31,8 +30,4 @@ body {
   margin-top: 50px;
   margin-left: 20px;
   font-family: Courgette, cursive;
-}
-
-.view-more {
-  padding-left: 40%;
 }
