@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "../NavBar.css";
 
 export default function NavBar() {
+
   const navigateToHome = () => {
-    // You can use window.location.href to navigate
-    window.location.href = "/"; 
+    window.location.href = "/";
   };
 
   return (
@@ -21,11 +20,11 @@ export default function NavBar() {
           Home
         </button>
         <div className="dropdown">
-          <button className="dropbtn">Dropdown</button>
+          <button className="dropbtn">Categories</button>
           <div className="dropdown-content">
-            <a href="/breakfast">Breakfast</a>
-            <a href="/lunch">Lunch</a>
-            <a href="/dinner">Dinner</a>
+            <Link to="/breakfast">Breakfast</Link>
+            <Link to="/lunch">Lunch</Link>
+            <Link to="/dinner">Dinner</Link>
           </div>
         </div>
         <input
