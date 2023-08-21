@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Sidebar() {
-  const [quickRecipes, setQuickRecipes] = useState([]);
+  const [recipes, setRecipes] = useState([]);
 
   const API = process.env.REACT_APP_API_URL;
   console.log(API);
@@ -11,8 +11,9 @@ function Sidebar() {
   useEffect(() => {
     async function fetchQuickRecipes() {
       try {
-        const response = await axios.get(`${API}/quick_recipes`);
-        setQuickRecipes(response.data);
+        const response = await axios.get(`${API}/recipes`);
+        const quickRecipes = response.data.filter((recipe) => recipe.is_quick);
+        setRecipes(quickRecipes);
         // console.log(response.data)
       } catch (error) {
         console.error(error);
@@ -23,13 +24,18 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <h2 style={{ fontFamily: "Courgette", marginBottom: "40px" }}>
+      <h2 style={{ fontFamily: "Courgette", marginBottom: "40px", textAlign: "center" }}>
         Quick & Easy Recipes
       </h2>
       <ul>
-        {quickRecipes.map((recipe) => (
-          <li key={recipe.id} style={{ marginBottom: "40px" }}>
-            {recipe.dish}
+        {recipes.map((recipe) => (
+          <li key={recipe.id} style={{ marginBottom: "20px" }}>
+            <Link
+              to={`/recipe/${recipe.id}`}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              {recipe.dish}
+            </Link>
           </li>
         ))}
       </ul>
