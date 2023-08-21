@@ -1,5 +1,5 @@
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import "../Recipes.css";
@@ -18,19 +18,12 @@ function Recipes() {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response1 = await axios.get(`${API}/recipes`, {
+        const response = await axios.get(`${API}/recipes`, {
           params: {
             is_good: booleanParam,
           },
         });
-        const response2 = await axios.get(`${API}/quick_recipes`, {
-          params: {
-            is_good: booleanParam,
-          },
-        });
-
-        const combinedRecipes = [...response1.data, ...response2.data];
-        setRecipes(combinedRecipes);
+        setRecipes(response.data);
       } catch (error) {
         console.warn("catch", error);
       }
@@ -44,8 +37,8 @@ function Recipes() {
         <div className="row">
           {recipes.map((recipe) => (
             <div key={recipe.id} className="col-md-4 mb-4">
-              <Link to={`/recipe/${recipe.id}`} className="recipe-link">
-                <div className="card">
+              <div className="card">
+                <Link to={`/recipe/${recipe.id}`} className="recipe-link">
                   <div
                     className="recipe-image card-img-top"
                     style={{ backgroundImage: `url(${recipe.image_url})` }}
@@ -53,8 +46,26 @@ function Recipes() {
                   <div className="card-body">
                     <h3 className="recipe-title card-title">{recipe.dish}</h3>
                   </div>
-                </div>
-              </Link>
+                </Link>
+                <p
+                  className="recipe-good"
+                  style={{ position: "absolute", right: "10px", top: "10px" }}
+                >
+                  {recipe.is_good ? (
+                    <span
+                      role="img"
+                      aria-label="Good Recipe"
+                      style={{ fontSize: "22px" }}
+                    >
+                      ❤️
+                    </span>
+                  ) : (
+                    <span role="img" aria-label="Not Good Recipe">
+                      ❌
+                    </span>
+                  )}
+                </p>
+              </div>
             </div>
           ))}
         </div>
