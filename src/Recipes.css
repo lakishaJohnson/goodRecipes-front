@@ -1,3 +1,7 @@
+.row {
+  margin-top: 40px;
+}
+
 .recipe-link {
   text-decoration: none;
   color: #333;
@@ -16,3 +20,14 @@
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
+
+.card {
+  height: 300px; 
+  overflow: hidden; 
+}
+
+.card-body {
+  height: 100%;
+  overflow: auto; 
+}
+
