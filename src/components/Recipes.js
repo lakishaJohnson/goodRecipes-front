@@ -24,6 +24,7 @@ function Recipes() {
           },
         });
         setRecipes(response.data);
+        console.log(response.data);
       } catch (error) {
         console.warn("catch", error);
       }
@@ -37,8 +38,8 @@ function Recipes() {
         <div className="row">
           {recipes.map((recipe) => (
             <div key={recipe.id} className="col-md-4 mb-4">
-              <div className="card">
-                <Link to={`/recipe/${recipe.id}`} className="recipe-link">
+        <div className="card">
+                <Link to={`/recipes/${recipe.id}`} className="recipe-link">
                   <div
                     className="recipe-image card-img-top"
                     style={{ backgroundImage: `url(${recipe.image_url})` }}
