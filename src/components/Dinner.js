@@ -35,14 +35,23 @@ export default function Dinner() {
           textAlign: "center",
           fontFamily: "Courgette",
           fontSize: "54px",
+          marginTop: "20px",
         }}
       >
         Dinner
       </h2>
-      <div className="row" style={{ margin: "30px", padding: "10px" }}>
+      <div
+        className="row"
+        style={{
+          margin: "30px",
+          padding: "10px",
+          justifyContent: "center",
+          gap: "20px",
+        }}
+      >
         {recipes.map((recipe) => (
           <div key={recipe.id} className="col-md-3">
-            <div className="card h-100" style={{ width: "18rem" }}>
+            <div className="card h-100" style={{ width: "20rem" }}>
               <img
                 className="card-img-top"
                 src={recipe.image_url}
@@ -58,6 +67,24 @@ export default function Dinner() {
                   View Recipe
                 </a>
               </div>
+              <p
+                className="recipe-good"
+                style={{ position: "absolute", right: "10px", top: "10px" }}
+              >
+                {recipe.is_good ? (
+                  <span
+                    role="img"
+                    aria-label="Good Recipe"
+                    style={{ fontSize: "22px" }}
+                  >
+                    ❤️
+                  </span>
+                ) : (
+                  <span role="img" aria-label="Not Good Recipe">
+                    ❌
+                  </span>
+                )}
+              </p>
             </div>
           </div>
         ))}
