@@ -31,7 +31,7 @@ function Sidebar() {
         {recipes.map((recipe) => (
           <li key={recipe.id} style={{ marginBottom: "20px" }}>
             <Link
-              to={`/recipe/${recipe.id}`}
+              to={`/recipes/${recipe.id}`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               {recipe.dish}
