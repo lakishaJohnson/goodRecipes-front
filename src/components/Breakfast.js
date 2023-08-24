@@ -55,16 +55,21 @@ export default function Breakfast() {
         {recipes.map((recipe) => (
           <div key={recipe.id} className="col-md-3">
             <div className="card h-100" style={{ width: "20rem" }}>
-              <img
-                className="card-img-top"
-                src={recipe.image_url}
-                alt={recipe.dish}
-                style={{ height: "200px", objectFit: "cover" }}
-              />
+              <a href={`/recipes/${recipe.id}`}>
+                <img
+                  className="card-img-top"
+                  src={recipe.image_url}
+                  alt={recipe.dish}
+                  style={{ height: "200px", objectFit: "cover" }}
+                />
+              </a>
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{recipe.dish}</h5>
+                <h5 className="card-title" style={{ fontFamily: "Courgette" }}>
+                  {recipe.dish}
+                </h5>
+                <p>{recipe.nutrition_facts}</p>
                 <a
-                  href={`/recipe/${recipe.id}`}
+                  href={`/recipes/${recipe.id}`}
                   className="btn btn-primary mt-auto"
                 >
                   View Recipe
