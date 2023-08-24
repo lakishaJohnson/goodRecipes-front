@@ -1,0 +1,62 @@
+.EditRecipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  background-color: #d7eaef;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px;
+  background-image: url("https://i0.wp.com/recipehippie.com/wp-content/uploads/2022/09/olive-branch-background.jpg?fit=300%2C246&ssl=1");
+  background-size: contain;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: "Courgette", cursive;
+  font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* margin-left: 20px; */
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.submit-button {
+  display: block;
+  margin: 0 auto; 
+  width: 50%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
