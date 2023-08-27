@@ -20,8 +20,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Adjust the height of the line as needed */
-  background-color: #EA6803; /* Change this to your desired line color */
+  height: 2px;
+  background-color: #ea6803;
 }
 
 .navbar-buttons {
@@ -38,6 +38,13 @@
   border-radius: 5px;
   cursor: pointer;
   margin-right: 10px;
+}
+
+.btn-primary,
+.dropbtn,
+.search {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 /* Dropdown Styles */

@@ -65,3 +65,11 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+.share-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+}
