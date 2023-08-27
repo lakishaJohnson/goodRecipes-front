@@ -64,7 +64,7 @@ export default function Dinner() {
                 <h5 className="card-title" style={{ fontFamily: "Courgette" }}>
                   {recipe.dish}
                 </h5>
-                <p>{recipe.nutrition_facts}</p>
+                <p>Per serving:{recipe.nutrition_facts}</p>
                 <a
                   href={`/recipes/${recipe.id}`}
                   className="btn btn-primary mt-auto"
