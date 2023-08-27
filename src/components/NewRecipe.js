@@ -58,6 +58,7 @@ function NewRecipe() {
         image_url: getRandomImage(),
       }));
     }
+    // eslint-disable-next-line
   }, []);
 
   const handleSubmit = (event) => {
