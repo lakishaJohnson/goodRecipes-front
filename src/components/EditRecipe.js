@@ -17,7 +17,7 @@ function EditRecipe() {
     cook_time: "",
     total_time: "",
     directions: "",
-    nutrition_facts: "",
+    nutrition_facts: 0,
     tips: "",
     is_good: false,
     is_quick: false,
@@ -76,7 +76,7 @@ function EditRecipe() {
             <input
               id="dish"
               type="text"
-              value={recipe.dish || ""}
+              value={recipe.dish}
               onChange={handleTextChange}
             />
           </div>
@@ -87,7 +87,7 @@ function EditRecipe() {
             <input
               id="is_good"
               type="checkbox"
-              checked={recipe.is_good || ""}
+              checked={recipe.is_good}
               onChange={handleCheckboxChange}
             />
           </div>
@@ -98,7 +98,7 @@ function EditRecipe() {
             <input
               id="category"
               type="text"
-              value={recipe.category || ""}
+              value={recipe.category}
               onChange={handleTextChange}
             />
           </div>
@@ -119,7 +119,7 @@ function EditRecipe() {
             <input
               id="prep_time"
               type="text"
-              value={recipe.prep_time || ""}
+              value={recipe.prep_time}
               onChange={handleTextChange}
             />
           </div>
@@ -130,7 +130,7 @@ function EditRecipe() {
             <input
               id="cook_time"
               type="text"
-              value={recipe.cook_time || ""}
+              value={recipe.cook_time}
               onChange={handleTextChange}
             />
           </div>
@@ -141,7 +141,7 @@ function EditRecipe() {
             <input
               id="total_time"
               type="text"
-              value={recipe.total_time || ""}
+              value={recipe.total_time}
               onChange={handleTextChange}
             />
           </div>
@@ -156,12 +156,14 @@ function EditRecipe() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="nutritionfacts" className="label">
-              Nutrition Facts:
+            <label htmlFor="nutrition_facts" className="label">
+              Number of calories:
             </label>
-            <textarea
+            <input
               id="nutrition_facts"
-              value={recipe.nutrition_facts || ""}
+              type="number"
+              value={recipe.nutrition_facts}
+              placeholder="260"
               onChange={handleTextChange}
             />
           </div>
@@ -171,7 +173,7 @@ function EditRecipe() {
             </label>
             <textarea
               id="tips"
-              value={recipe.tips || ""}
+              value={recipe.tips || ""} 
               onChange={handleTextChange}
             />
           </div>
@@ -182,7 +184,7 @@ function EditRecipe() {
             <input
               id="image_url"
               type="url"
-              value={recipe.image_url || ""}
+              value={recipe.image_url}
               onChange={handleTextChange}
             />
           </div>
