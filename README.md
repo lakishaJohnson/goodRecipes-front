@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# GoodRecipes App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the GoodRecipes application, a Part II of my Portfolio Project. This fullstack web application allows users to view, manage, and share recipes, making cooking and meal planning easier. I used "Recipe Search and Diet by Edaman" to fetch recipes based on user input. GoodRecipes is viewable on different screen sizes.  
 
-## Available Scripts
+## Links
 
-In the project directory, you can run:
+- [Backend Repository](https://github.com/lakishaJohnson/goodRecipes-back)
+- [Trello Board](https://trello.com/b/vUJvDd2p/goodrecipes)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- View recipe details, including ingredients, instructions, and cooking times.
+- Edit existing recipes to update information.
+- Delete recipes that are no longer needed.
+- Share recipes on social media, specifically Twitter.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- Axios: To make HTTP requests to API.
+- React: JavaScript library for building user interfaces.
+- React Router: Library for routing in React applications.
+- Axios: Library for making HTTP requests.
+- Bootstrap and CSS: Styling the components.
+- React Share: Library for sharing content on social media.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions
 
-### `npm run build`
+1. Clone the repository.
+2. Install the dependencies by running `npm install` in the project directory.
+3. Open the `.env` file and update the `REACT_APP_API_URL` variable with the API URL.
+4. Start the development server with `npm start`.
+5. Application will open in your browser at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open the GoodRecipes App in your browser.
+2. Explore Recipe: Click on a recipe to view its details.
+3. Edit Recipe: Click "Edit" to modify recipe information.
+4. Delete Recipe: Click "Delete" to remove a recipe.
+5. Share Recipe: Click the Twitter icon to share the recipe on Twitter.
+6. Create Recipe: Hover over Categories bar to New link.
+7. Search: Search by ingredients, or name of meal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development
 
-### `npm run eject`
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your modifications and enhancements.
+4. Test your changes to ensure they work correctly.
+5. Commit and push your changes to your forked repository.
+6. Create a pull request to submit your changes for review.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under the MIT License.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Connect with me on [LinkedIn](https://www.linkedin.com/in/lakisha-johnson-0b0587219/) or check out my other projects on [GitHub](https://github.com/lakishaJohnson).
